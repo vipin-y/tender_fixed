@@ -1,0 +1,3176 @@
+{
+  "contractName": "TenderRepo",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "tenderMapping",
+      "outputs": [
+        {
+          "internalType": "enum TenderRepo.TenderStatus",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "tenders",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tenderToAppend",
+          "type": "address"
+        }
+      ],
+      "name": "newTender",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tenderAddress",
+          "type": "address"
+        }
+      ],
+      "name": "getTenderStatus",
+      "outputs": [
+        {
+          "internalType": "enum TenderRepo.TenderStatus",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getAllTenders",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getTenderCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getOngoingTenders",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tenderAddress",
+          "type": "address"
+        }
+      ],
+      "name": "updateTenderStatusToBiddingComplete",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tenderAddress",
+          "type": "address"
+        }
+      ],
+      "name": "updateTenderStatusToDeployed",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.12+commit.7709ece9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"getAllTenders\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"getOngoingTenders\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getTenderCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"tenderAddress\",\"type\":\"address\"}],\"name\":\"getTenderStatus\",\"outputs\":[{\"internalType\":\"enum TenderRepo.TenderStatus\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"tenderToAppend\",\"type\":\"address\"}],\"name\":\"newTender\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"tenderMapping\",\"outputs\":[{\"internalType\":\"enum TenderRepo.TenderStatus\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"tenders\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"tenderAddress\",\"type\":\"address\"}],\"name\":\"updateTenderStatusToBiddingComplete\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"tenderAddress\",\"type\":\"address\"}],\"name\":\"updateTenderStatusToDeployed\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/vipin/Desktop/tender_SIH/contracts/TenderRepo.sol\":\"TenderRepo\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/vipin/Desktop/tender_SIH/contracts/TenderRepo.sol\":{\"keccak256\":\"0x909a3ee377f422355d90b1f07e4db0b4112e34857b0645776acaa803c5d94805\",\"urls\":[\"bzz-raw://79878c5a3c6b811cd1b5d37bdee97364a861e52ec50b6d71fe08ab6436da3b8c\",\"dweb:/ipfs/QmS1bJf4c28AviuKtAZMmAnJZpbHN2p7RyvbsSjKb7FVEZ\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506108cc806100206000396000f3fe608060405234801561001057600080fd5b50600436106100935760003560e01c8063465e1def11610066578063465e1def1461011e5780635850b3831461014e57806380650c861461016c5780639f53827f1461019c578063b6af93c8146101cc57610093565b806304a01abe146100985780631ee1acb6146100b45780632358c046146100e457806336b4181c14610102575b600080fd5b6100b260048036036100ad9190810190610607565b6101fc565b005b6100ce60048036036100c99190810190610607565b610260565b6040516100db9190610757565b60405180910390f35b6100ec610331565b6040516100f99190610735565b60405180910390f35b61011c60048036036101179190810190610607565b6103bf565b005b61013860048036036101339190810190610630565b610422565b604051610145919061071a565b60405180910390f35b61015661045e565b604051610163919061078d565b60405180910390f35b61018660048036036101819190810190610630565b61046a565b604051610193919061071a565b60405180910390f35b6101b660048036036101b19190810190610607565b610567565b6040516101c39190610772565b60405180910390f35b6101e660048036036101e19190810190610607565b6105bd565b6040516101f39190610772565b60405180910390f35b6002600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083600281111561025857fe5b021790555050565b6000808290806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550506000600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083600281111561032357fe5b021790555060019050919050565b606060008054806020026020016040519081016040528092919081815260200182805480156103b557602002820191906000526020600020905b8160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001906001019080831161036b575b5050505050905090565b60018060008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083600281111561041a57fe5b021790555050565b6000818154811061042f57fe5b906000526020600020016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008080549050905090565b6000808054905082111561047d57600080fd5b6000600281111561048a57fe5b6001600080858154811061049a57fe5b9060005260206000200160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16600281111561051857fe5b141561055d576000828154811061052b57fe5b9060005260206000200160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050610562565b600080fd5b919050565b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff169050919050565b60016020528060005260406000206000915054906101000a900460ff1681565b6000813590506105ec8161085b565b92915050565b60008135905061060181610872565b92915050565b60006020828403121561061957600080fd5b6000610627848285016105dd565b91505092915050565b60006020828403121561064257600080fd5b6000610650848285016105f2565b91505092915050565b60006106658383610671565b60208301905092915050565b61067a816107e1565b82525050565b610689816107e1565b82525050565b600061069a826107b8565b6106a481856107d0565b93506106af836107a8565b8060005b838110156106e05781516106c78882610659565b97506106d2836107c3565b9250506001810190506106b3565b5085935050505092915050565b6106f6816107f3565b82525050565b6107058161083c565b82525050565b61071481610832565b82525050565b600060208201905061072f6000830184610680565b92915050565b6000602082019050818103600083015261074f818461068f565b905092915050565b600060208201905061076c60008301846106ed565b92915050565b600060208201905061078760008301846106fc565b92915050565b60006020820190506107a2600083018461070b565b92915050565b6000819050602082019050919050565b600081519050919050565b6000602082019050919050565b600082825260208201905092915050565b60006107ec82610812565b9050919050565b60008115159050919050565b600081905061080d8261084e565b919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b6000610847826107ff565b9050919050565b6003811061085857fe5b50565b610864816107e1565b811461086f57600080fd5b50565b61087b81610832565b811461088657600080fd5b5056fea365627a7a723158209e84cdff88041effac5240c6ff8848699d274e4f77acc70d0a6c4fe39b3ebd4e6c6578706572696d656e74616cf564736f6c634300050c0040",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100935760003560e01c8063465e1def11610066578063465e1def1461011e5780635850b3831461014e57806380650c861461016c5780639f53827f1461019c578063b6af93c8146101cc57610093565b806304a01abe146100985780631ee1acb6146100b45780632358c046146100e457806336b4181c14610102575b600080fd5b6100b260048036036100ad9190810190610607565b6101fc565b005b6100ce60048036036100c99190810190610607565b610260565b6040516100db9190610757565b60405180910390f35b6100ec610331565b6040516100f99190610735565b60405180910390f35b61011c60048036036101179190810190610607565b6103bf565b005b61013860048036036101339190810190610630565b610422565b604051610145919061071a565b60405180910390f35b61015661045e565b604051610163919061078d565b60405180910390f35b61018660048036036101819190810190610630565b61046a565b604051610193919061071a565b60405180910390f35b6101b660048036036101b19190810190610607565b610567565b6040516101c39190610772565b60405180910390f35b6101e660048036036101e19190810190610607565b6105bd565b6040516101f39190610772565b60405180910390f35b6002600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083600281111561025857fe5b021790555050565b6000808290806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550506000600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083600281111561032357fe5b021790555060019050919050565b606060008054806020026020016040519081016040528092919081815260200182805480156103b557602002820191906000526020600020905b8160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001906001019080831161036b575b5050505050905090565b60018060008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083600281111561041a57fe5b021790555050565b6000818154811061042f57fe5b906000526020600020016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008080549050905090565b6000808054905082111561047d57600080fd5b6000600281111561048a57fe5b6001600080858154811061049a57fe5b9060005260206000200160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16600281111561051857fe5b141561055d576000828154811061052b57fe5b9060005260206000200160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050610562565b600080fd5b919050565b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff169050919050565b60016020528060005260406000206000915054906101000a900460ff1681565b6000813590506105ec8161085b565b92915050565b60008135905061060181610872565b92915050565b60006020828403121561061957600080fd5b6000610627848285016105dd565b91505092915050565b60006020828403121561064257600080fd5b6000610650848285016105f2565b91505092915050565b60006106658383610671565b60208301905092915050565b61067a816107e1565b82525050565b610689816107e1565b82525050565b600061069a826107b8565b6106a481856107d0565b93506106af836107a8565b8060005b838110156106e05781516106c78882610659565b97506106d2836107c3565b9250506001810190506106b3565b5085935050505092915050565b6106f6816107f3565b82525050565b6107058161083c565b82525050565b61071481610832565b82525050565b600060208201905061072f6000830184610680565b92915050565b6000602082019050818103600083015261074f818461068f565b905092915050565b600060208201905061076c60008301846106ed565b92915050565b600060208201905061078760008301846106fc565b92915050565b60006020820190506107a2600083018461070b565b92915050565b6000819050602082019050919050565b600081519050919050565b6000602082019050919050565b600082825260208201905092915050565b60006107ec82610812565b9050919050565b60008115159050919050565b600081905061080d8261084e565b919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b6000610847826107ff565b9050919050565b6003811061085857fe5b50565b610864816107e1565b811461086f57600080fd5b50565b61087b81610832565b811461088657600080fd5b5056fea365627a7a723158209e84cdff88041effac5240c6ff8848699d274e4f77acc70d0a6c4fe39b3ebd4e6c6578706572696d656e74616cf564736f6c634300050c0040",
+  "sourceMap": "61:1426:14:-;;;285:27;8:9:-1;5:2;;;30:1;27;20:12;5:2;285:27:14;61:1426;;;;;;",
+  "deployedSourceMap": "61:1426:14:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;61:1426:14;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1340:145;;;;;;;;;;;;;;;;:::i;:::-;;319:197;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;658:128;;;:::i;:::-;;;;;;;;;;;;;;;;1183:151;;;;;;;;;;;;;;;;:::i;:::-;;87:24;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;792:94;;;:::i;:::-;;;;;;;;;;;;;;;;892:285;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;522:130;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;224:54;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;1340:145;1449:29;1418:13;:28;1432:13;1418:28;;;;;;;;;;;;;;;;:60;;;;;;;;;;;;;;;;;;;;;;;;1340:145;:::o;319:197::-;378:4;394:7;407:14;394:28;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;394:28:14;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;464:24;432:13;:29;446:14;432:29;;;;;;;;;;;;;;;;:56;;;;;;;;;;;;;;;;;;;;;;;;505:4;498:11;;319:197;;;:::o;658:128::-;704:16;772:7;765:14;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;658:128;:::o;1183:151::-;1299:28;1268:13;:28;1282:13;1268:28;;;;;;;;;;;;;;;;:59;;;;;;;;;;;;;;;;;;;;;;;;1183:151;:::o;87:24::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;792:94::-;839:7;865;:14;;;;858:21;;792:94;:::o;892:285::-;955:7;1009;:14;;;;1001:5;:22;997:36;;;1025:8;;;997:36;1080:24;1047:57;;;;;;;;:13;:29;1061:7;1069:5;1061:14;;;;;;;;;;;;;;;;;;;;;;;;;1047:29;;;;;;;;;;;;;;;;;;;;;;;;;:57;;;;;;;;;1043:110;;;1127:7;1135:5;1127:14;;;;;;;;;;;;;;;;;;;;;;;;;1120:21;;;;1043:110;1162:8;;;892:285;;;;:::o;522:130::-;586:12;617:13;:28;631:13;617:28;;;;;;;;;;;;;;;;;;;;;;;;;610:35;;522:130;;;:::o;224:54::-;;;;;;;;;;;;;;;;;;;;;;:::o;5:130:-1:-;;85:6;72:20;63:29;;97:33;124:5;97:33;;;57:78;;;;;142:130;;222:6;209:20;200:29;;234:33;261:5;234:33;;;194:78;;;;;279:241;;383:2;371:9;362:7;358:23;354:32;351:2;;;399:1;396;389:12;351:2;434:1;451:53;496:7;487:6;476:9;472:22;451:53;;;441:63;;413:97;345:175;;;;;527:241;;631:2;619:9;610:7;606:23;602:32;599:2;;;647:1;644;637:12;599:2;682:1;699:53;744:7;735:6;724:9;720:22;699:53;;;689:63;;661:97;593:175;;;;;776:173;;863:46;905:3;897:6;863:46;;;938:4;933:3;929:14;915:28;;856:93;;;;;957:103;1030:24;1048:5;1030:24;;;1025:3;1018:37;1012:48;;;1067:113;1150:24;1168:5;1150:24;;;1145:3;1138:37;1132:48;;;1218:690;;1363:54;1411:5;1363:54;;;1430:86;1509:6;1504:3;1430:86;;;1423:93;;1537:56;1587:5;1537:56;;;1613:7;1641:1;1626:260;1651:6;1648:1;1645:13;1626:260;;;1718:6;1712:13;1739:63;1798:3;1783:13;1739:63;;;1732:70;;1819:60;1872:6;1819:60;;;1809:70;;1683:203;1673:1;1670;1666:9;1661:14;;1626:260;;;1630:14;1899:3;1892:10;;1342:566;;;;;;;;1916:104;1993:21;2008:5;1993:21;;;1988:3;1981:34;1975:45;;;2027:156;2125:52;2171:5;2125:52;;;2120:3;2113:65;2107:76;;;2190:113;2273:24;2291:5;2273:24;;;2268:3;2261:37;2255:48;;;2310:213;;2428:2;2417:9;2413:18;2405:26;;2442:71;2510:1;2499:9;2495:17;2486:6;2442:71;;;2399:124;;;;;2530:361;;2698:2;2687:9;2683:18;2675:26;;2748:9;2742:4;2738:20;2734:1;2723:9;2719:17;2712:47;2773:108;2876:4;2867:6;2773:108;;;2765:116;;2669:222;;;;;2898:201;;3010:2;2999:9;2995:18;2987:26;;3024:65;3086:1;3075:9;3071:17;3062:6;3024:65;;;2981:118;;;;;3106:243;;3239:2;3228:9;3224:18;3216:26;;3253:86;3336:1;3325:9;3321:17;3312:6;3253:86;;;3210:139;;;;;3356:213;;3474:2;3463:9;3459:18;3451:26;;3488:71;3556:1;3545:9;3541:17;3532:6;3488:71;;;3445:124;;;;;3576:151;;3662:3;3654:11;;3700:4;3695:3;3691:14;3683:22;;3648:79;;;;3734:137;;3843:5;3837:12;3827:22;;3808:63;;;;3878:108;;3976:4;3971:3;3967:14;3959:22;;3953:33;;;;3994:178;;4124:6;4119:3;4112:19;4161:4;4156:3;4152:14;4137:29;;4105:67;;;;;4180:91;;4242:24;4260:5;4242:24;;;4231:35;;4225:46;;;;4278:85;;4351:5;4344:13;4337:21;4326:32;;4320:43;;;;4370:140;;4449:5;4438:16;;4455:50;4499:5;4455:50;;;4432:78;;;;4517:121;;4590:42;4583:5;4579:54;4568:65;;4562:76;;;;4645:72;;4707:5;4696:16;;4690:27;;;;4724:140;;4818:41;4853:5;4818:41;;;4805:54;;4799:65;;;;4871:108;4957:1;4950:5;4947:12;4937:2;;4963:9;4937:2;4931:48;;4986:117;5055:24;5073:5;5055:24;;;5048:5;5045:35;5035:2;;5094:1;5091;5084:12;5035:2;5029:74;;5110:117;5179:24;5197:5;5179:24;;;5172:5;5169:35;5159:2;;5218:1;5215;5208:12;5159:2;5153:74;",
+  "source": "pragma solidity ^0.5.11;\npragma experimental ABIEncoderV2;\n\n\ncontract TenderRepo {\n    address[] public tenders;\n    \n    enum TenderStatus {\n        activeOnBid,\n        biddingComplete,\n        contractDeployed\n    }\n\n    mapping (address => TenderStatus) public tenderMapping;\n\n    constructor()public{\n\n    }\n\n\n    function newTender(address tenderToAppend) public returns (bool) {\n        tenders.push(tenderToAppend);\n        tenderMapping[tenderToAppend] = TenderStatus.activeOnBid;\n        return true;\n    }\n\n    function getTenderStatus(address tenderAddress) public returns (TenderStatus) {\n        return tenderMapping[tenderAddress];\n    }\n\n    function getAllTenders() public view returns (address[] memory) {\n        //to be used by verifier\n        return tenders;\n    }\n\n    function getTenderCount() public view returns (uint256) {\n        return tenders.length;\n    }\n\n    function getOngoingTenders(uint256 index) public view returns (address) {\n        //loop at web3\n        if (index > tenders.length) revert();\n        if (tenderMapping[tenders[index]] == TenderStatus.activeOnBid) {\n            return tenders[index]; \n        }\n        revert();\n    }\n\n    function updateTenderStatusToBiddingComplete(address tenderAddress) public {\n        tenderMapping[tenderAddress] = TenderStatus.biddingComplete;\n    }\n\n    function updateTenderStatusToDeployed(address tenderAddress) public {\n        tenderMapping[tenderAddress] = TenderStatus.contractDeployed;\n    }\n}",
+  "sourcePath": "/home/vipin/Desktop/tender_SIH/contracts/TenderRepo.sol",
+  "ast": {
+    "absolutePath": "/home/vipin/Desktop/tender_SIH/contracts/TenderRepo.sol",
+    "exportedSymbols": {
+      "TenderRepo": [
+        2635
+      ]
+    },
+    "id": 2636,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2506,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".11"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:14"
+      },
+      {
+        "id": 2507,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "25:33:14"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2635,
+        "linearizedBaseContracts": [
+          2635
+        ],
+        "name": "TenderRepo",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 2510,
+            "name": "tenders",
+            "nodeType": "VariableDeclaration",
+            "scope": 2635,
+            "src": "87:24:14",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 2508,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "87:7:14",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 2509,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "87:9:14",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "TenderRepo.TenderStatus",
+            "id": 2514,
+            "members": [
+              {
+                "id": 2511,
+                "name": "activeOnBid",
+                "nodeType": "EnumValue",
+                "src": "150:11:14"
+              },
+              {
+                "id": 2512,
+                "name": "biddingComplete",
+                "nodeType": "EnumValue",
+                "src": "171:15:14"
+              },
+              {
+                "id": 2513,
+                "name": "contractDeployed",
+                "nodeType": "EnumValue",
+                "src": "196:16:14"
+              }
+            ],
+            "name": "TenderStatus",
+            "nodeType": "EnumDefinition",
+            "src": "122:96:14"
+          },
+          {
+            "constant": false,
+            "id": 2518,
+            "name": "tenderMapping",
+            "nodeType": "VariableDeclaration",
+            "scope": 2635,
+            "src": "224:54:14",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_enum$_TenderStatus_$2514_$",
+              "typeString": "mapping(address => enum TenderRepo.TenderStatus)"
+            },
+            "typeName": {
+              "id": 2517,
+              "keyType": {
+                "id": 2515,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "233:7:14",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "224:33:14",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_enum$_TenderStatus_$2514_$",
+                "typeString": "mapping(address => enum TenderRepo.TenderStatus)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 2516,
+                "name": "TenderStatus",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 2514,
+                "src": "244:12:14",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                  "typeString": "enum TenderRepo.TenderStatus"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2521,
+              "nodeType": "Block",
+              "src": "304:8:14",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 2522,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2519,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "296:2:14"
+            },
+            "returnParameters": {
+              "id": 2520,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "304:0:14"
+            },
+            "scope": 2635,
+            "src": "285:27:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2544,
+              "nodeType": "Block",
+              "src": "384:132:14",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 2532,
+                        "name": "tenderToAppend",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2524,
+                        "src": "407:14:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2529,
+                        "name": "tenders",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2510,
+                        "src": "394:7:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                          "typeString": "address[] storage ref"
+                        }
+                      },
+                      "id": 2531,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "394:12:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_address_$returns$_t_uint256_$",
+                        "typeString": "function (address) returns (uint256)"
+                      }
+                    },
+                    "id": 2533,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "394:28:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 2534,
+                  "nodeType": "ExpressionStatement",
+                  "src": "394:28:14"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2540,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 2535,
+                        "name": "tenderMapping",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2518,
+                        "src": "432:13:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_enum$_TenderStatus_$2514_$",
+                          "typeString": "mapping(address => enum TenderRepo.TenderStatus)"
+                        }
+                      },
+                      "id": 2537,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 2536,
+                        "name": "tenderToAppend",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2524,
+                        "src": "446:14:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "432:29:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                        "typeString": "enum TenderRepo.TenderStatus"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2538,
+                        "name": "TenderStatus",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2514,
+                        "src": "464:12:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_TenderStatus_$2514_$",
+                          "typeString": "type(enum TenderRepo.TenderStatus)"
+                        }
+                      },
+                      "id": 2539,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "activeOnBid",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "464:24:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                        "typeString": "enum TenderRepo.TenderStatus"
+                      }
+                    },
+                    "src": "432:56:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                      "typeString": "enum TenderRepo.TenderStatus"
+                    }
+                  },
+                  "id": 2541,
+                  "nodeType": "ExpressionStatement",
+                  "src": "432:56:14"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 2542,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "505:4:14",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 2528,
+                  "id": 2543,
+                  "nodeType": "Return",
+                  "src": "498:11:14"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2545,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "newTender",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2525,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2524,
+                  "name": "tenderToAppend",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2545,
+                  "src": "338:22:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2523,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "338:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "337:24:14"
+            },
+            "returnParameters": {
+              "id": 2528,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2527,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2545,
+                  "src": "378:4:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2526,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "378:4:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "377:6:14"
+            },
+            "scope": 2635,
+            "src": "319:197:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2556,
+              "nodeType": "Block",
+              "src": "600:52:14",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 2552,
+                      "name": "tenderMapping",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2518,
+                      "src": "617:13:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_enum$_TenderStatus_$2514_$",
+                        "typeString": "mapping(address => enum TenderRepo.TenderStatus)"
+                      }
+                    },
+                    "id": 2554,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 2553,
+                      "name": "tenderAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2547,
+                      "src": "631:13:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "617:28:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                      "typeString": "enum TenderRepo.TenderStatus"
+                    }
+                  },
+                  "functionReturnParameters": 2551,
+                  "id": 2555,
+                  "nodeType": "Return",
+                  "src": "610:35:14"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2557,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTenderStatus",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2548,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2547,
+                  "name": "tenderAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2557,
+                  "src": "547:21:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2546,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "547:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "546:23:14"
+            },
+            "returnParameters": {
+              "id": 2551,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2550,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2557,
+                  "src": "586:12:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                    "typeString": "enum TenderRepo.TenderStatus"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 2549,
+                    "name": "TenderStatus",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 2514,
+                    "src": "586:12:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                      "typeString": "enum TenderRepo.TenderStatus"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "585:14:14"
+            },
+            "scope": 2635,
+            "src": "522:130:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2565,
+              "nodeType": "Block",
+              "src": "722:64:14",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2563,
+                    "name": "tenders",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2510,
+                    "src": "772:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                      "typeString": "address[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 2562,
+                  "id": 2564,
+                  "nodeType": "Return",
+                  "src": "765:14:14"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2566,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAllTenders",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2558,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "680:2:14"
+            },
+            "returnParameters": {
+              "id": 2562,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2561,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2566,
+                  "src": "704:16:14",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2559,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "704:7:14",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 2560,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "704:9:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "703:18:14"
+            },
+            "scope": 2635,
+            "src": "658:128:14",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2574,
+              "nodeType": "Block",
+              "src": "848:38:14",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 2571,
+                      "name": "tenders",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2510,
+                      "src": "865:7:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                        "typeString": "address[] storage ref"
+                      }
+                    },
+                    "id": 2572,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "length",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "865:14:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 2570,
+                  "id": 2573,
+                  "nodeType": "Return",
+                  "src": "858:21:14"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2575,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTenderCount",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2567,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "815:2:14"
+            },
+            "returnParameters": {
+              "id": 2570,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2569,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2575,
+                  "src": "839:7:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2568,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "839:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "838:9:14"
+            },
+            "scope": 2635,
+            "src": "792:94:14",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2607,
+              "nodeType": "Block",
+              "src": "964:213:14",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 2585,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 2582,
+                      "name": "index",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2577,
+                      "src": "1001:5:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2583,
+                        "name": "tenders",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2510,
+                        "src": "1009:7:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                          "typeString": "address[] storage ref"
+                        }
+                      },
+                      "id": 2584,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1009:14:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1001:22:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 2589,
+                  "nodeType": "IfStatement",
+                  "src": "997:36:14",
+                  "trueBody": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 2586,
+                        "name": "revert",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [
+                          2801,
+                          2802
+                        ],
+                        "referencedDeclaration": 2801,
+                        "src": "1025:6:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_revert_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 2587,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1025:8:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 2588,
+                    "nodeType": "ExpressionStatement",
+                    "src": "1025:8:14"
+                  }
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                      "typeString": "enum TenderRepo.TenderStatus"
+                    },
+                    "id": 2597,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 2590,
+                        "name": "tenderMapping",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2518,
+                        "src": "1047:13:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_enum$_TenderStatus_$2514_$",
+                          "typeString": "mapping(address => enum TenderRepo.TenderStatus)"
+                        }
+                      },
+                      "id": 2594,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 2591,
+                          "name": "tenders",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2510,
+                          "src": "1061:7:14",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                            "typeString": "address[] storage ref"
+                          }
+                        },
+                        "id": 2593,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 2592,
+                          "name": "index",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2577,
+                          "src": "1069:5:14",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1061:14:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1047:29:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                        "typeString": "enum TenderRepo.TenderStatus"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2595,
+                        "name": "TenderStatus",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2514,
+                        "src": "1080:12:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_TenderStatus_$2514_$",
+                          "typeString": "type(enum TenderRepo.TenderStatus)"
+                        }
+                      },
+                      "id": 2596,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "activeOnBid",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1080:24:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                        "typeString": "enum TenderRepo.TenderStatus"
+                      }
+                    },
+                    "src": "1047:57:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 2603,
+                  "nodeType": "IfStatement",
+                  "src": "1043:110:14",
+                  "trueBody": {
+                    "id": 2602,
+                    "nodeType": "Block",
+                    "src": "1106:47:14",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 2598,
+                            "name": "tenders",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2510,
+                            "src": "1127:7:14",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                              "typeString": "address[] storage ref"
+                            }
+                          },
+                          "id": 2600,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 2599,
+                            "name": "index",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2577,
+                            "src": "1135:5:14",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1127:14:14",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "functionReturnParameters": 2581,
+                        "id": 2601,
+                        "nodeType": "Return",
+                        "src": "1120:21:14"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 2604,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        2801,
+                        2802
+                      ],
+                      "referencedDeclaration": 2801,
+                      "src": "1162:6:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$__$returns$__$",
+                        "typeString": "function () pure"
+                      }
+                    },
+                    "id": 2605,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1162:8:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2606,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1162:8:14"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2608,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getOngoingTenders",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2578,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2577,
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2608,
+                  "src": "919:13:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2576,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "919:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "918:15:14"
+            },
+            "returnParameters": {
+              "id": 2581,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2580,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2608,
+                  "src": "955:7:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2579,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "955:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "954:9:14"
+            },
+            "scope": 2635,
+            "src": "892:285:14",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2620,
+              "nodeType": "Block",
+              "src": "1258:76:14",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2618,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 2613,
+                        "name": "tenderMapping",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2518,
+                        "src": "1268:13:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_enum$_TenderStatus_$2514_$",
+                          "typeString": "mapping(address => enum TenderRepo.TenderStatus)"
+                        }
+                      },
+                      "id": 2615,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 2614,
+                        "name": "tenderAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2610,
+                        "src": "1282:13:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1268:28:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                        "typeString": "enum TenderRepo.TenderStatus"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2616,
+                        "name": "TenderStatus",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2514,
+                        "src": "1299:12:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_TenderStatus_$2514_$",
+                          "typeString": "type(enum TenderRepo.TenderStatus)"
+                        }
+                      },
+                      "id": 2617,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "biddingComplete",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1299:28:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                        "typeString": "enum TenderRepo.TenderStatus"
+                      }
+                    },
+                    "src": "1268:59:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                      "typeString": "enum TenderRepo.TenderStatus"
+                    }
+                  },
+                  "id": 2619,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1268:59:14"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2621,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateTenderStatusToBiddingComplete",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2611,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2610,
+                  "name": "tenderAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2621,
+                  "src": "1228:21:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2609,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1228:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1227:23:14"
+            },
+            "returnParameters": {
+              "id": 2612,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1258:0:14"
+            },
+            "scope": 2635,
+            "src": "1183:151:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2633,
+              "nodeType": "Block",
+              "src": "1408:77:14",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2631,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 2626,
+                        "name": "tenderMapping",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2518,
+                        "src": "1418:13:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_enum$_TenderStatus_$2514_$",
+                          "typeString": "mapping(address => enum TenderRepo.TenderStatus)"
+                        }
+                      },
+                      "id": 2628,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 2627,
+                        "name": "tenderAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2623,
+                        "src": "1432:13:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1418:28:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                        "typeString": "enum TenderRepo.TenderStatus"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2629,
+                        "name": "TenderStatus",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2514,
+                        "src": "1449:12:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_TenderStatus_$2514_$",
+                          "typeString": "type(enum TenderRepo.TenderStatus)"
+                        }
+                      },
+                      "id": 2630,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "contractDeployed",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1449:29:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                        "typeString": "enum TenderRepo.TenderStatus"
+                      }
+                    },
+                    "src": "1418:60:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                      "typeString": "enum TenderRepo.TenderStatus"
+                    }
+                  },
+                  "id": 2632,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1418:60:14"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2634,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateTenderStatusToDeployed",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2624,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2623,
+                  "name": "tenderAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2634,
+                  "src": "1378:21:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2622,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1378:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1377:23:14"
+            },
+            "returnParameters": {
+              "id": 2625,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1408:0:14"
+            },
+            "scope": 2635,
+            "src": "1340:145:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2636,
+        "src": "61:1426:14"
+      }
+    ],
+    "src": "0:1487:14"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/vipin/Desktop/tender_SIH/contracts/TenderRepo.sol",
+    "exportedSymbols": {
+      "TenderRepo": [
+        2635
+      ]
+    },
+    "id": 2636,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2506,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".11"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:14"
+      },
+      {
+        "id": 2507,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "25:33:14"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2635,
+        "linearizedBaseContracts": [
+          2635
+        ],
+        "name": "TenderRepo",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 2510,
+            "name": "tenders",
+            "nodeType": "VariableDeclaration",
+            "scope": 2635,
+            "src": "87:24:14",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 2508,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "87:7:14",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 2509,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "87:9:14",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "TenderRepo.TenderStatus",
+            "id": 2514,
+            "members": [
+              {
+                "id": 2511,
+                "name": "activeOnBid",
+                "nodeType": "EnumValue",
+                "src": "150:11:14"
+              },
+              {
+                "id": 2512,
+                "name": "biddingComplete",
+                "nodeType": "EnumValue",
+                "src": "171:15:14"
+              },
+              {
+                "id": 2513,
+                "name": "contractDeployed",
+                "nodeType": "EnumValue",
+                "src": "196:16:14"
+              }
+            ],
+            "name": "TenderStatus",
+            "nodeType": "EnumDefinition",
+            "src": "122:96:14"
+          },
+          {
+            "constant": false,
+            "id": 2518,
+            "name": "tenderMapping",
+            "nodeType": "VariableDeclaration",
+            "scope": 2635,
+            "src": "224:54:14",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_enum$_TenderStatus_$2514_$",
+              "typeString": "mapping(address => enum TenderRepo.TenderStatus)"
+            },
+            "typeName": {
+              "id": 2517,
+              "keyType": {
+                "id": 2515,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "233:7:14",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "224:33:14",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_enum$_TenderStatus_$2514_$",
+                "typeString": "mapping(address => enum TenderRepo.TenderStatus)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 2516,
+                "name": "TenderStatus",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 2514,
+                "src": "244:12:14",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                  "typeString": "enum TenderRepo.TenderStatus"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2521,
+              "nodeType": "Block",
+              "src": "304:8:14",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 2522,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2519,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "296:2:14"
+            },
+            "returnParameters": {
+              "id": 2520,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "304:0:14"
+            },
+            "scope": 2635,
+            "src": "285:27:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2544,
+              "nodeType": "Block",
+              "src": "384:132:14",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 2532,
+                        "name": "tenderToAppend",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2524,
+                        "src": "407:14:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2529,
+                        "name": "tenders",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2510,
+                        "src": "394:7:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                          "typeString": "address[] storage ref"
+                        }
+                      },
+                      "id": 2531,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "394:12:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_address_$returns$_t_uint256_$",
+                        "typeString": "function (address) returns (uint256)"
+                      }
+                    },
+                    "id": 2533,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "394:28:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 2534,
+                  "nodeType": "ExpressionStatement",
+                  "src": "394:28:14"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2540,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 2535,
+                        "name": "tenderMapping",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2518,
+                        "src": "432:13:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_enum$_TenderStatus_$2514_$",
+                          "typeString": "mapping(address => enum TenderRepo.TenderStatus)"
+                        }
+                      },
+                      "id": 2537,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 2536,
+                        "name": "tenderToAppend",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2524,
+                        "src": "446:14:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "432:29:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                        "typeString": "enum TenderRepo.TenderStatus"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2538,
+                        "name": "TenderStatus",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2514,
+                        "src": "464:12:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_TenderStatus_$2514_$",
+                          "typeString": "type(enum TenderRepo.TenderStatus)"
+                        }
+                      },
+                      "id": 2539,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "activeOnBid",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "464:24:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                        "typeString": "enum TenderRepo.TenderStatus"
+                      }
+                    },
+                    "src": "432:56:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                      "typeString": "enum TenderRepo.TenderStatus"
+                    }
+                  },
+                  "id": 2541,
+                  "nodeType": "ExpressionStatement",
+                  "src": "432:56:14"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 2542,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "505:4:14",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 2528,
+                  "id": 2543,
+                  "nodeType": "Return",
+                  "src": "498:11:14"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2545,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "newTender",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2525,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2524,
+                  "name": "tenderToAppend",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2545,
+                  "src": "338:22:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2523,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "338:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "337:24:14"
+            },
+            "returnParameters": {
+              "id": 2528,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2527,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2545,
+                  "src": "378:4:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2526,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "378:4:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "377:6:14"
+            },
+            "scope": 2635,
+            "src": "319:197:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2556,
+              "nodeType": "Block",
+              "src": "600:52:14",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 2552,
+                      "name": "tenderMapping",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2518,
+                      "src": "617:13:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_enum$_TenderStatus_$2514_$",
+                        "typeString": "mapping(address => enum TenderRepo.TenderStatus)"
+                      }
+                    },
+                    "id": 2554,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 2553,
+                      "name": "tenderAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2547,
+                      "src": "631:13:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "617:28:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                      "typeString": "enum TenderRepo.TenderStatus"
+                    }
+                  },
+                  "functionReturnParameters": 2551,
+                  "id": 2555,
+                  "nodeType": "Return",
+                  "src": "610:35:14"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2557,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTenderStatus",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2548,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2547,
+                  "name": "tenderAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2557,
+                  "src": "547:21:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2546,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "547:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "546:23:14"
+            },
+            "returnParameters": {
+              "id": 2551,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2550,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2557,
+                  "src": "586:12:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                    "typeString": "enum TenderRepo.TenderStatus"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 2549,
+                    "name": "TenderStatus",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 2514,
+                    "src": "586:12:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                      "typeString": "enum TenderRepo.TenderStatus"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "585:14:14"
+            },
+            "scope": 2635,
+            "src": "522:130:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2565,
+              "nodeType": "Block",
+              "src": "722:64:14",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2563,
+                    "name": "tenders",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2510,
+                    "src": "772:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                      "typeString": "address[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 2562,
+                  "id": 2564,
+                  "nodeType": "Return",
+                  "src": "765:14:14"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2566,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAllTenders",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2558,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "680:2:14"
+            },
+            "returnParameters": {
+              "id": 2562,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2561,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2566,
+                  "src": "704:16:14",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2559,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "704:7:14",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 2560,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "704:9:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "703:18:14"
+            },
+            "scope": 2635,
+            "src": "658:128:14",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2574,
+              "nodeType": "Block",
+              "src": "848:38:14",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 2571,
+                      "name": "tenders",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2510,
+                      "src": "865:7:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                        "typeString": "address[] storage ref"
+                      }
+                    },
+                    "id": 2572,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "length",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "865:14:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 2570,
+                  "id": 2573,
+                  "nodeType": "Return",
+                  "src": "858:21:14"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2575,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTenderCount",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2567,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "815:2:14"
+            },
+            "returnParameters": {
+              "id": 2570,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2569,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2575,
+                  "src": "839:7:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2568,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "839:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "838:9:14"
+            },
+            "scope": 2635,
+            "src": "792:94:14",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2607,
+              "nodeType": "Block",
+              "src": "964:213:14",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 2585,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 2582,
+                      "name": "index",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2577,
+                      "src": "1001:5:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2583,
+                        "name": "tenders",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2510,
+                        "src": "1009:7:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                          "typeString": "address[] storage ref"
+                        }
+                      },
+                      "id": 2584,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1009:14:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1001:22:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 2589,
+                  "nodeType": "IfStatement",
+                  "src": "997:36:14",
+                  "trueBody": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 2586,
+                        "name": "revert",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [
+                          2801,
+                          2802
+                        ],
+                        "referencedDeclaration": 2801,
+                        "src": "1025:6:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_revert_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 2587,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1025:8:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 2588,
+                    "nodeType": "ExpressionStatement",
+                    "src": "1025:8:14"
+                  }
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                      "typeString": "enum TenderRepo.TenderStatus"
+                    },
+                    "id": 2597,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 2590,
+                        "name": "tenderMapping",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2518,
+                        "src": "1047:13:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_enum$_TenderStatus_$2514_$",
+                          "typeString": "mapping(address => enum TenderRepo.TenderStatus)"
+                        }
+                      },
+                      "id": 2594,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 2591,
+                          "name": "tenders",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2510,
+                          "src": "1061:7:14",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                            "typeString": "address[] storage ref"
+                          }
+                        },
+                        "id": 2593,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 2592,
+                          "name": "index",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2577,
+                          "src": "1069:5:14",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1061:14:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1047:29:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                        "typeString": "enum TenderRepo.TenderStatus"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2595,
+                        "name": "TenderStatus",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2514,
+                        "src": "1080:12:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_TenderStatus_$2514_$",
+                          "typeString": "type(enum TenderRepo.TenderStatus)"
+                        }
+                      },
+                      "id": 2596,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "activeOnBid",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1080:24:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                        "typeString": "enum TenderRepo.TenderStatus"
+                      }
+                    },
+                    "src": "1047:57:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 2603,
+                  "nodeType": "IfStatement",
+                  "src": "1043:110:14",
+                  "trueBody": {
+                    "id": 2602,
+                    "nodeType": "Block",
+                    "src": "1106:47:14",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 2598,
+                            "name": "tenders",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2510,
+                            "src": "1127:7:14",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                              "typeString": "address[] storage ref"
+                            }
+                          },
+                          "id": 2600,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 2599,
+                            "name": "index",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2577,
+                            "src": "1135:5:14",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1127:14:14",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "functionReturnParameters": 2581,
+                        "id": 2601,
+                        "nodeType": "Return",
+                        "src": "1120:21:14"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 2604,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        2801,
+                        2802
+                      ],
+                      "referencedDeclaration": 2801,
+                      "src": "1162:6:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$__$returns$__$",
+                        "typeString": "function () pure"
+                      }
+                    },
+                    "id": 2605,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1162:8:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2606,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1162:8:14"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2608,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getOngoingTenders",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2578,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2577,
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2608,
+                  "src": "919:13:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2576,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "919:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "918:15:14"
+            },
+            "returnParameters": {
+              "id": 2581,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2580,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2608,
+                  "src": "955:7:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2579,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "955:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "954:9:14"
+            },
+            "scope": 2635,
+            "src": "892:285:14",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2620,
+              "nodeType": "Block",
+              "src": "1258:76:14",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2618,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 2613,
+                        "name": "tenderMapping",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2518,
+                        "src": "1268:13:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_enum$_TenderStatus_$2514_$",
+                          "typeString": "mapping(address => enum TenderRepo.TenderStatus)"
+                        }
+                      },
+                      "id": 2615,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 2614,
+                        "name": "tenderAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2610,
+                        "src": "1282:13:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1268:28:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                        "typeString": "enum TenderRepo.TenderStatus"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2616,
+                        "name": "TenderStatus",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2514,
+                        "src": "1299:12:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_TenderStatus_$2514_$",
+                          "typeString": "type(enum TenderRepo.TenderStatus)"
+                        }
+                      },
+                      "id": 2617,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "biddingComplete",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1299:28:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                        "typeString": "enum TenderRepo.TenderStatus"
+                      }
+                    },
+                    "src": "1268:59:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                      "typeString": "enum TenderRepo.TenderStatus"
+                    }
+                  },
+                  "id": 2619,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1268:59:14"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2621,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateTenderStatusToBiddingComplete",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2611,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2610,
+                  "name": "tenderAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2621,
+                  "src": "1228:21:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2609,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1228:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1227:23:14"
+            },
+            "returnParameters": {
+              "id": 2612,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1258:0:14"
+            },
+            "scope": 2635,
+            "src": "1183:151:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2633,
+              "nodeType": "Block",
+              "src": "1408:77:14",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2631,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 2626,
+                        "name": "tenderMapping",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2518,
+                        "src": "1418:13:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_enum$_TenderStatus_$2514_$",
+                          "typeString": "mapping(address => enum TenderRepo.TenderStatus)"
+                        }
+                      },
+                      "id": 2628,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 2627,
+                        "name": "tenderAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2623,
+                        "src": "1432:13:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1418:28:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                        "typeString": "enum TenderRepo.TenderStatus"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2629,
+                        "name": "TenderStatus",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2514,
+                        "src": "1449:12:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_TenderStatus_$2514_$",
+                          "typeString": "type(enum TenderRepo.TenderStatus)"
+                        }
+                      },
+                      "id": 2630,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "contractDeployed",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1449:29:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                        "typeString": "enum TenderRepo.TenderStatus"
+                      }
+                    },
+                    "src": "1418:60:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TenderStatus_$2514",
+                      "typeString": "enum TenderRepo.TenderStatus"
+                    }
+                  },
+                  "id": 2632,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1418:60:14"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2634,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateTenderStatusToDeployed",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2624,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2623,
+                  "name": "tenderAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2634,
+                  "src": "1378:21:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2622,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1378:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1377:23:14"
+            },
+            "returnParameters": {
+              "id": 2625,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1408:0:14"
+            },
+            "scope": 2635,
+            "src": "1340:145:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2636,
+        "src": "61:1426:14"
+      }
+    ],
+    "src": "0:1487:14"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.12+commit.7709ece9.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.20",
+  "updatedAt": "2020-01-09T09:45:15.579Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
